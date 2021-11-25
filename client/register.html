@@ -23,20 +23,151 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/intro.css" />
-  </head>
-  <body class="primary-body-color">
-    <div class="account-container py-5 px-4">
-      <div class="register-logo-container flex-css py-5">
-        <img src="./images/signup2.png" alt="logo" />
-      </div>
-      <div class="form-container register-form"></div>
-    </div>
+    <link rel="stylesheet" href="css/account.css" />
+    <!-- script  -->
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $("#birthdate").datepicker();
+      });
+    </script>
+  </head>
+  <body class="primary-body-color">
+    <div class="intro-nav flex-css-row-sb py-3 px-4">
+      <div class="logo-container">
+        <a href="./index.html">
+          <img src="./images/logo.png" alt="logo" />
+        </a>
+      </div>
+      <div class="link-container">
+        <a href="./login.html" class="login-link mr-1">Log in</a>
+      </div>
+    </div>
+    <div class="container-fluid account-container py-5 px-4">
+      <div class="register-logo-container flex-css">
+        <img src="./images/signup2.png" alt="logo" />
+      </div>
+      <div class="form-container register-form flex-css">
+        <form>
+          <div class="profile-img-container flex-css pt-5 pb-4">
+            <div class="img-container">
+              <img
+                src="./images/empty_profile.png"
+                alt="profile"
+                id="profileImage"
+              />
+              <div class="upload-btn flex-css">
+                <img src="./images/camera.png" alt="camera" />
+                <input type="file" id="profileImage" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" id="firstname" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" id="lastname" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="password">Confirm Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirmpassword"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="date">Birth Date</label>
+                <input type="text" class="form-control" id="birthdate" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender">
+                  <option value="" disabled selected>--Select--</option>
+                  <option value="1">Male</option>
+                  <option value="0">Female</option>
+                  <option value="10">Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <label for="contact"
+                  >Mobile No.
+                  <span> <img src="./images/flag.png" alt="flag" /> </span>
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="+977"
+                  id="contact"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="submit-btn-container flex-css mt-4">
+            <button class="register-btn" id="registerBtn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+    <script src="./js/requestHandler.js"></script>
+    <script src="./js/register.js"></script>
   </body>
 </html>

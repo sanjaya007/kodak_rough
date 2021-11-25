@@ -1,0 +1,244 @@
+.intro-nav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.intro-nav .link-container a {
+  background-color: #131c24;
+  color: var(--white-color);
+  padding: 7px 20px !important;
+  font-weight: 500;
+  border-radius: 6px;
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.intro-nav .link-container a:active {
+  transform: scale(0.9);
+}
+
+.intro-nav .link-container a.register-link {
+  background-color: var(--blue-color);
+}
+
+.intro-nav .link-container a.login-link {
+  background-color: var(--blue-color);
+}
+
+.account-container {
+  transition: all 0.3s ease;
+}
+
+.form-container form label {
+  color: #abafb4;
+  font-size: 14px;
+}
+
+.form-container form label img {
+  height: 12px;
+}
+
+.form-container form {
+  max-width: 700px;
+  min-width: 700px;
+  margin: 0 auto;
+}
+
+.form-container form input,
+.form-container form select {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: #1c2730;
+  color: #abafb4;
+  padding: 0 10px !important;
+}
+
+.form-container form input:focus,
+.form-container form select:focus {
+  box-shadow: none;
+  background-color: #1c2730;
+  color: #e7e7e7;
+}
+
+.form-container form .form-group {
+  margin: 0 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.form-container form button {
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 7px 40px !important;
+  background-color: var(--blue-color);
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-container form button:hover {
+  background-color: #4e64dd;
+}
+
+.form-container form button:active {
+  border-color: #4e64dd;
+  box-shadow: none !important;
+}
+
+.form-container form .profile-img-container .img-container {
+  position: relative;
+  max-width: 130px;
+  max-height: 130px;
+  min-width: 130px;
+  min-height: 130px;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  background-color: #abafb4;
+  border: 3px solid #abafb4;
+}
+
+.form-container form .profile-img-container .img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.form-container form .profile-img-container .img-container .upload-btn {
+  position: absolute;
+  background-color: #f1f1f1;
+  border-radius: 50%;
+  max-width: 25px;
+  min-width: 25px;
+  max-height: 25px;
+  min-height: 25px;
+  height: 25px;
+  width: 25px;
+  top: 12px;
+  right: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.form-container form .profile-img-container .img-container .upload-btn img {
+  object-fit: unset;
+  border-radius: unset;
+  width: auto;
+  height: auto;
+  pointer-events: none;
+}
+
+.form-container
+  form
+  .profile-img-container
+  .img-container
+  .upload-btn
+  input[type="file"] {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  padding-left: 40px !important;
+  cursor: pointer;
+}
+
+.form-container.login-form {
+  background-color: #131c24;
+  padding: 25px !important;
+  min-width: 400px;
+  border-radius: 6px;
+}
+
+.form-container.login-form form {
+  max-width: auto;
+  min-width: auto;
+}
+
+.form-container.login-form form .form-group {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: 20px !important;
+}
+
+.account-container .logo-note-text h1 {
+  font-size: 18px;
+}
+
+/* date picker  */
+.ui-datepicker {
+  padding: 0.2em 0.2em 0 !important;
+}
+
+.ui-datepicker .ui-datepicker-header {
+  padding: 0.2em 0 !important;
+}
+
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+  margin-left: -8px !important;
+  margin-top: -8px !important;
+}
+
+.ui-datepicker table {
+  margin: 0 0 0.4em !important;
+}
+
+.ui-datepicker th {
+  padding: 0.7em 0.3em !important;
+}
+
+.ui-datepicker td {
+  padding: 1px !important;
+}
+
+.ui-datepicker td span,
+.ui-datepicker td a {
+  padding: 0.2em !important;
+}
+
+/* responsive  */
+@media (max-width: 767px) {
+  .form-container form {
+    max-width: auto;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .intro-nav {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .account-container {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .form-container form .form-group {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .form-container.login-form {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .big-logo-wrapper {
+    justify-content: center;
+    margin-bottom: 40px !important;
+  }
+  .big-logo-wrapper .big-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .big-logo-wrapper .logo-note-text h1 {
+    text-align: center;
+  }
+}

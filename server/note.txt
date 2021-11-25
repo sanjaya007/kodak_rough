@@ -1,0 +1,10 @@
+// {
+//     "firstname": "Sanjaya",
+//     "lastname": "Paudel",
+//     "username": "sanjaya7",
+//     "email": "sanjaya7@gmail.com",
+//     "password": "sanjaya7",
+//     "birthdate": "1999-06-07",
+//     "gender": "male",
+//     "contact": "9846714125"
+// }
