@@ -31,9 +31,9 @@ $("#profileImage").on("change", function (e) {
 const addUser = (e) => {
   e.preventDefault();
   showAlert();
-  postData(hostUrl + "/users", setData(), function (data) {
-    console.log(data);
-  });
+  // postData(hostUrl + "/users", setData(), function (data) {
+  //   console.log(data);
+  // });
 };
 
 $("#registerBtn").on("click", addUser);
