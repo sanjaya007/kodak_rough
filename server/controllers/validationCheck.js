@@ -15,13 +15,21 @@ const validationCheck = (res, rawBody) => {
   const body = trimmedBody(rawBody);
 
   if (isAllEmpty(body)) {
-    responder(res, 200, "error", null, "All fields are required !!");
+    responder(
+      res,
+      200,
+      "error",
+      null,
+      "Only alphabets are allowed in firstname !"
+    );
+    // responder(res, 200, "error", null, "All fields are required !!");
     return false;
   }
 
   for (const key in body) {
     if (body[key] === "") {
-      responder(res, 200, "error", key, `${key} is required !`);
+      const keyCapitalized = key.charAt(0).toUpperCase() + key.slice(1);
+      responder(res, 200, "error", key, `${keyCapitalized} is required !`);
       return false;
     }
   }
